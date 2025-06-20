@@ -1,16 +1,16 @@
 [
   {
     "id": "personne1",
-    "nom": "Alice Dupont",
+    "nom": "Sacha Montaigne",
     "thumb": "images/personne001-thumb.jpg",
     "photo": "images/personne001-hd.jpg",
-    "description": "Alice est photographe passionnée par la nature et les voyages."
+    "description": "Sacha est Aide soignante."
   },
   {
     "id": "personne2",
-    "nom": "Jean Martin",
+    "nom": "Mickaël Angué",
     "thumb": "images/personne002-thumb.jpg",
     "photo": "images/personne002-hd.jpg",
-    "description": "Jean est développeur web et amateur de randonnée."
+    "description": "Mickaël est infirmier. Photographe à ses heures perdues, c'est également un cinéphile averti"
   }
 ]
