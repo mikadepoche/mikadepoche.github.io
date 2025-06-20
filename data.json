@@ -1,0 +1,16 @@
+[
+  {
+    "id": "personne1",
+    "nom": "Alice Dupont",
+    "thumb": "images/personne001-thumb.jpg",
+    "photo": "images/personne001-hd.jpg",
+    "description": "Alice est photographe passionnée par la nature et les voyages."
+  },
+  {
+    "id": "personne2",
+    "nom": "Jean Martin",
+    "thumb": "images/personne002-thumb.jpg",
+    "photo": "images/personne002-hd.jpg",
+    "description": "Jean est développeur web et amateur de randonnée."
+  }
+]

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Détails de la personne</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="index.html">← Retour à la galerie</a>
+  <div id="details"></div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const personId = params.get('id');
+
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        const person = data.find(p => p.id === personId);
+        if (!person) {
+          document.getElementById('details').innerHTML = "<p>Personne non trouvée.</p>";
+          return;
+        }
+        document.title = person.nom;
+        document.getElementById('details').innerHTML = `
+          <h2>${person.nom}</h2>
+          <img src="${person.photo}" alt="Photo de ${person.nom}" class="hd-photo">
+          <p>${person.description}</p>
+        `;
+      });
+  </script>
+</body>
+</html>
