@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cadres</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <nav>
+     <ul>
+      <li><a href="/" class="">Accueil</a></li>
+      <li><a href="/medecins.html" class="">Médecins</a></li>
+      <li><a href="/infirmiers.html" class="">Infirmiers</a></li>
+      <li><a href="/aides_soignants.html" class="">Aides-soignants</a></li>
+      <li><a href="/secretaires.html" class="">Secrétaires</a></li>
+      <li><a href="/brancardiers.html" class="">Brancardiers</a></li>
+      <li><a href="/cadres.html" class="active">Cadres</a></li>
+     </ul>
+
+    </nav>
+  </header>
+
+  <!-- CONTENU DE LA PAGE -->
+  <main class="content">
+    <h1>Cadres</h1>
+<ul>
+  
+</ul>
+<a href="/">← Retour à l'accueil</a>
+
+  </main>
+<script>
+  const input = document.getElementById('searchInput');
+  const cards = document.querySelectorAll('.profil-card');
+
+  input.addEventListener('input', function () {
+    const search = input.value.toLowerCase();
+
+    cards.forEach(card => {
+      const name = card.querySelector('.profil-name').textContent.toLowerCase();
+      const poste = card.querySelector('.profil-poste').textContent.toLowerCase();
+      card.style.display = (name.includes(search) || poste.includes(search)) ? 'block' : 'none';
+    });
+  });
+</script>
+
+
+</body>
+</html>

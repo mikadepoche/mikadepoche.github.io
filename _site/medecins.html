@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Médecins</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <nav>
+     <ul>
+      <li><a href="/" class="">Accueil</a></li>
+      <li><a href="/medecins.html" class="active">Médecins</a></li>
+      <li><a href="/infirmiers.html" class="">Infirmiers</a></li>
+      <li><a href="/aides_soignants.html" class="">Aides-soignants</a></li>
+      <li><a href="/secretaires.html" class="">Secrétaires</a></li>
+      <li><a href="/brancardiers.html" class="">Brancardiers</a></li>
+      <li><a href="/cadres.html" class="">Cadres</a></li>
+     </ul>
+
+    </nav>
+  </header>
+
+  <!-- CONTENU DE LA PAGE -->
+  <main class="content">
+    <h1>Médecins</h1>
+<ul>
+  
+    <li>
+      <a href="/medecins/marie-dupont.html">
+        <img src="/assets/img/marie.jpg" alt="Marie Dupont" width="100">
+        Marie Dupont
+      </a>
+    </li>
+  
+    <li>
+      <a href="/medecins/mika.html">
+        <img src="/assets/img/mika.jpg" alt="Mickaël Angué" width="100">
+        Mickaël Angué
+      </a>
+    </li>
+  
+    <li>
+      <a href="/medecins/thomas_valentin.html">
+        <img src="/assets/img/thomas_valentin.jpg" alt="Thomas Valentin" width="100">
+        Thomas Valentin
+      </a>
+    </li>
+  
+</ul>
+<a href="/">← Retour à l'accueil</a>
+
+<input type="text" id="searchInput" placeholder="Rechercher un nom..." />
+<input type="text" id="searchInput" placeholder="Rechercher un nom ou un poste..." />
+
+<select id="sortSelect">
+  <option value="alpha-asc">Trier par prénom (A → Z)</option>
+  <option value="alpha-desc">Trier par prénom (Z → A)</option>
+</select>
+
+<div class="profil-grid" id="profilList">
+  
+  
+    <div class="profil-card"
+         data-prenom=""
+         data-anciennete="">
+      <a href="/medecins/marie-dupont.html">
+        <img src="/assets/img/marie.jpg" alt="Marie Dupont">
+        <h3 class="profil-name">Marie Dupont</h3>
+        <p class="profil-poste">Cardiologue</p>
+      </a>
+    </div>
+  
+    <div class="profil-card"
+         data-prenom="mickael"
+         data-anciennete="2012">
+      <a href="/medecins/mika.html">
+        <img src="/assets/img/mika.jpg" alt="Mickaël Angué">
+        <h3 class="profil-name">Mickaël Angué</h3>
+        <p class="profil-poste">Infirmier</p>
+      </a>
+    </div>
+  
+    <div class="profil-card"
+         data-prenom="thomas"
+         data-anciennete="2024">
+      <a href="/medecins/thomas_valentin.html">
+        <img src="/assets/img/thomas_valentin.jpg" alt="Thomas Valentin">
+        <h3 class="profil-name">Thomas Valentin</h3>
+        <p class="profil-poste">Medecin</p>
+      </a>
+    </div>
+  
+</div>
+</div>
+<script>
+  const input = document.getElementById('searchInput');
+  const select = document.getElementById('sortSelect');
+  const container = document.getElementById('profilList');
+  const cards = Array.from(document.querySelectorAll('.profil-card'));
+
+  function filterAndSort() {
+    const search = input.value.toLowerCase();
+    const sortBy = select.value;
+
+    let filtered = cards.filter(card => {
+      const name = card.querySelector('.profil-name').textContent.toLowerCase();
+      const poste = card.querySelector('.profil-poste').textContent.toLowerCase();
+      return name.includes(search) || poste.includes(search);
+    });
+
+    filtered.sort((a, b) => {
+      if (sortBy === "alpha-asc") {
+        return a.dataset.prenom.localeCompare(b.dataset.prenom);
+      } else if (sortBy === "alpha-desc") {
+        return b.dataset.prenom.localeCompare(a.dataset.prenom);
+      } else if (sortBy === "anciennete-asc") {
+        return a.dataset.anciennete - b.dataset.anciennete;
+      } else if (sortBy === "anciennete-desc") {
+        return b.dataset.anciennete - a.dataset.anciennete;
+      }
+    });
+
+    // Réafficher les cartes dans le bon ordre
+    container.innerHTML = "";
+    filtered.forEach(card => container.appendChild(card));
+  }
+
+  input.addEventListener('input', filterAndSort);
+  select.addEventListener('change', filterAndSort);
+</script>
+
+
+
+  </main>
+<script>
+  const input = document.getElementById('searchInput');
+  const cards = document.querySelectorAll('.profil-card');
+
+  input.addEventListener('input', function () {
+    const search = input.value.toLowerCase();
+
+    cards.forEach(card => {
+      const name = card.querySelector('.profil-name').textContent.toLowerCase();
+      const poste = card.querySelector('.profil-poste').textContent.toLowerCase();
+      card.style.display = (name.includes(search) || poste.includes(search)) ? 'block' : 'none';
+    });
+  });
+</script>
+
+
+</body>
+</html>

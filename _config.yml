@@ -1,0 +1,13 @@
+collections:
+  medecins:
+    output: true
+  infirmiers:
+    output: true
+  aides_soignants:
+    output: true
+  secretaires:
+    output: true
+  brancardiers:
+    output: true
+  cadres:
+    output: true

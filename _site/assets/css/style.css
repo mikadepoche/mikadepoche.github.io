@@ -1,0 +1,165 @@
+/* STYLE GLOBAL */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 2rem;
+  color: #333;
+}
+
+/* TITRES */
+h1, h2 {
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* LIENS */
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTE DE PROFILS */
+ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+li {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGES */
+img {
+  border-radius: 50%;
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* PROFIL INDIVIDUEL */
+.profil {
+  max-width: 600px;
+  margin: 3rem auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+.profil img {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.profil h1 {
+  margin: 0.5rem 0;
+}
+
+.profil h2 {
+  font-weight: normal;
+  color: #555;
+}
+
+.profil p {
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
+/* BARRE DE NAVIGATION */
+.navbar {
+  background-color: #2c3e50;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: black !important;   /* couleur visible par défaut */
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+
+/* ESPACE SOUS LA NAVBAR */
+.content {
+  padding-top: 2rem;
+}
+
+.navbar a.active {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+}
+
+.description ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  margin-bottom: 1rem;
+}
+
+.description ol {
+  padding-left: 1.5rem;
+  list-style-type: decimal;
+  margin-bottom: 1rem;
+}
+#searchInput {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.6rem 1rem;
+  width: 80%;
+  max-width: 400px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#sortSelect {
+  display: block;
+  margin: 1rem auto 2rem auto;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+

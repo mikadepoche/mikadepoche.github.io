@@ -1,0 +1,17 @@
+---
+layout: default
+title: Aides-soignants
+---
+
+<h1>Aides-soignants</h1>
+<ul>
+  {% for profil in site.aides_soignants %}
+    <li>
+      <a href="{{ profil.url }}">
+        <img src="{{ profil.photo }}" alt="{{ profil.title }}" width="100">
+        {{ profil.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+<a href="/">← Retour à l'accueil</a>
