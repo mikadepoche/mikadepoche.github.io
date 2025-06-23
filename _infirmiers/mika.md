@@ -6,7 +6,8 @@ poste: Infirmier
 description: |
   Mika est infirmier depuis 2003
 
-  ![Mika en vacances](https://mikadepoche.freeboxos.fr:36273/share/oJmc-RLmozipzsY3/PXL_20240714_184209250.jpg)
+  <img src="https://mikadepoche.freeboxos.fr:36273/share/oJmc-RLmozipzsY3/PXL_20240714_184209250.jpg" width="800" />
+
 
   Ses films préférés :
   - Parasite
