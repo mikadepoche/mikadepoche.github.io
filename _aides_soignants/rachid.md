@@ -1,12 +1,12 @@
 ---
 layout: profil
 title: Rachid Goumna
-photo: /assets/img/rachid_goumna.jpg
+photo: /assets/css/img/rachid_goumna.jpg
 poste: aide soignant
-prenom: rachid
-anciennete: 2020
+prenom: Rachid
+anciennete: 
 description: |
-  Rachid est aux urgences depuis ...
+  
 
   
 
