@@ -1,12 +1,12 @@
 ---
 layout: profil
 title: Sandrine Poisson
-photo: /assets/img/sandrine_poisson.jpg
+photo: /assets/css/img/sandrine_poisson.jpg
 poste: aide soignante
-prenom: sandrine
-anciennete: 2020
+prenom: Sandrine
+anciennete: 
 description: |
-  Sandrine est aux urgences depuis ...
+  
 
   
 
