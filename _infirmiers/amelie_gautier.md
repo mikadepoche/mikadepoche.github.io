@@ -1,6 +1,6 @@
 ---
 layout: profil
-title: Amelie_gautier
+title: Amelie Gautier
 photo: /assets/css/img/amelie_gautier.jpg
 poste: Infirmière
 prenom: Amelie
