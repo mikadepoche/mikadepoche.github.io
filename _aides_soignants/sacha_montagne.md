@@ -1,7 +1,7 @@
 ---
 layout: profil
 title: Sacha Montagne
-photo: /assets/img/sacha_montagne.jpg
+photo: /assets/css/img/sacha_montagne2.jpg
 poste: aide soignante
 prenom: Sacha
 anciennete: 
