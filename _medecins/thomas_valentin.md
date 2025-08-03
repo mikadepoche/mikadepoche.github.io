@@ -6,7 +6,7 @@ poste: Medecin
 prenom: Thomas
 anciennete: 2024
 description: |
-  Thomas est arrivé aux urgences de St Nazaire en ...
+
 
   
 ---
