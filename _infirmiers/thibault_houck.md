@@ -1,9 +1,9 @@
 ---
 layout: profil
-title: Thibault Houck
-photo: /assets/css/img/thibault_houck.jpg
+title: Thibaut Houck
+photo: /assets/css/img/thibaut_houck.jpg
 poste: Infirmier
-prenom: Thibault
+prenom: Thibaut
 anciennete: 
 description: |
  
