@@ -1,6 +1,6 @@
 ---
 layout: profil
-title: Prisca rambelonandrianina
+title: Prisca Rambelonandrianina
 photo: /assets/css/img/prisca_rambelonandrianina.jpg
 poste: Medecin
 prenom: Prisca
