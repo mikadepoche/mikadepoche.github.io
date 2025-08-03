@@ -1,6 +1,6 @@
 ---
 layout: profil
-title: Ophelie_frehel
+title: Ophelie Frehel
 photo: /assets/css/img/ophelie_frehel.jpg
 poste: Infirmière
 prenom: Ophélie
