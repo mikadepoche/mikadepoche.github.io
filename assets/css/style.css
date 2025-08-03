@@ -163,22 +163,33 @@ img {
   border-radius: 8px;
 }
 
+.profil-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
 .profil-card {
-  text-align: center;         /* ⬅️ Centre tout le contenu */
+  text-align: center;
+}
+
+.profil-card a {
+  text-decoration: none;
+  color: inherit;
   display: flex;
   flex-direction: column;
-  align-items: center;        /* ⬅️ Centre horizontalement les enfants */
-  justify-content: start;
-  padding: 1rem;
+  align-items: center;
 }
 
 .profil-card img {
-  max-width: 150px;
-  border-radius: 10px;
+  border-radius: 8px;
   margin-bottom: 0.5rem;
 }
 
-.profil-card h3,
-.profil-card p {
-  margin: 0.2rem 0;
+.profil-name {
+  margin-top: 0.3rem;
+  font-weight: bold;
 }
