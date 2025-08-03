@@ -4,9 +4,9 @@ title: Karina Zidane
 photo: /assets/img/karina_zidane.jpg
 poste: aide soignante
 prenom: karina
-anciennete: 2020
+anciennete: 
 description: |
-  Karina est aux urgences depuis ...
+  
 
   
 
