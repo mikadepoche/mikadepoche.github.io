@@ -4,14 +4,15 @@ title: Aides-soignants
 ---
 
 <h1>Aides-soignants</h1>
-<ul>
-  {% for profil in site.aides_soignants %}
-    <li>
+<ul class="profil-list">
+  {% for profil in site.aide_soignants %}
+    <li class="profil-card">
       <a href="{{ profil.url }}">
         <img src="{{ profil.photo }}" alt="{{ profil.title }}" width="100">
-        {{ profil.title }}
+        <div class="profil-name">{{ profil.title }}</div>
       </a>
     </li>
   {% endfor %}
 </ul>
 <a href="/">← Retour à l'accueil</a>
+
