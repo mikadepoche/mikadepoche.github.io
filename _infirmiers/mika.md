@@ -13,6 +13,10 @@ description: |
   - Parasite
   - Princesse Mononoke
   - Mad Max Fury road
+  - Lalaland
+  - Coldwar
+  - Wolfwalkers
+  - Eternal Sunshine of the spotless mind
 
   
 ---
