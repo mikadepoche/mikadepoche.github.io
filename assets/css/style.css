@@ -163,3 +163,22 @@ img {
   border-radius: 8px;
 }
 
+.profil-card {
+  text-align: center;         /* ⬅️ Centre tout le contenu */
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* ⬅️ Centre horizontalement les enfants */
+  justify-content: start;
+  padding: 1rem;
+}
+
+.profil-card img {
+  max-width: 150px;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.profil-card h3,
+.profil-card p {
+  margin: 0.2rem 0;
+}
