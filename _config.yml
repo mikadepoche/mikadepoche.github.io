@@ -3,7 +3,7 @@ collections:
     output: true
   infirmiers:
     output: true
-  aides_soignants:
+  aides-soignants:
     output: true
   secretaires:
     output: true
