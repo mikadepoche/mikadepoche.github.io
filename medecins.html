@@ -4,12 +4,12 @@ title: Médecins
 ---
 
 <h1>Médecins</h1>
-<ul>
+<ul class="profil-list">
   {% for profil in site.medecins %}
-    <li>
+    <li class="profil-card">
       <a href="{{ profil.url }}">
         <img src="{{ profil.photo }}" alt="{{ profil.title }}" width="100">
-        {{ profil.title }}
+        <div class="profil-name">{{ profil.title }}</div>
       </a>
     </li>
   {% endfor %}
