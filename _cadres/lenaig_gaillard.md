@@ -1,9 +1,9 @@
 ---
 layout: profil
-title: Lenaig Gaillard
+title: Lenaïg Gaillard
 photo: /assets/css/img/lenaig_gaillard.jpg
 poste: Cadre de santé
-prenom: Lenaig
+prenom: Lenaïg
 anciennete: 
 description: |
  
