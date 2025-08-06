@@ -2,7 +2,7 @@
 layout: profil
 title: David Noblet
 photo: /assets/css/img/david_noblet.jpg
-poste: aide soignante
+poste: aide soignant
 prenom: David
 anciennete: 
 description: |
