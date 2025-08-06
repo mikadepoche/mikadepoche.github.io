@@ -2,7 +2,7 @@
 layout: profil
 title: Fred Olive
 photo: /assets/css/img/fred_olive.jpg
-poste: aide soignante
+poste: aide soignant
 prenom: Fred
 anciennete: 
 description: |
