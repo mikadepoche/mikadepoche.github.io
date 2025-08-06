@@ -2,7 +2,7 @@
 layout: profil
 title: Goulven Danielo
 photo: /assets/css/img/goulven_danielo.jpg
-poste: aide soignante
+poste: aide soignant
 prenom: Goulven
 anciennete: 
 description: |
