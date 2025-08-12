@@ -30,22 +30,24 @@ title: Accueil
 <input type="text" id="searchInput" placeholder="Rechercher par prénom...">
 
 <!-- Conteneur des profils -->
+
+
+<input type="text" id="searchInput" placeholder="Rechercher par prénom...">
+
 <div id="profilesContainer">
-    <div class="profile-card" data-prenom="Alison">
-        <img src="assets/css/img/alison_audiger.jpg" alt="Alison Audiger">
-        <p>Alison Audiger</p>
-    </div>
-
-    <div class="profile-card" data-prenom="Marie">
-        <img src="assets/css/img/marie_dupont.jpg" alt="Marie Dupont">
-        <p>Marie Dupont</p>
-    </div>
-
-    <div class="profile-card" data-prenom="Jean">
-        <img src="assets/css/img/jean_durand.jpg" alt="Jean Durand">
-        <p>Jean Durand</p>
-    </div>
+  {% for profil in site.pages %}
+    {% if profil.layout == "profil" %}
+      <div class="profile-card" 
+           data-prenom="{{ profil.prenom | downcase }}">
+        <a href="{{ profil.url }}">
+          <img src="{{ profil.photo }}" alt="{{ profil.title }}">
+          <p>{{ profil.title }}</p>
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
 </div>
+
 
 <script src="assets/js/trombinoscope.js"></script>
 </body>
