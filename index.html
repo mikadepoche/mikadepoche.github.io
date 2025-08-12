@@ -28,9 +28,6 @@ title: Accueil
 
 <!-- Champ de recherche -->
 
-<!-- Conteneur des profils -->
-
-
 <input type="text" id="searchInput" placeholder="Rechercher par prénom...">
 
 <div id="profilesContainer">
@@ -44,6 +41,25 @@ title: Accueil
         </a>
       </div>
     {% endif %}
+  {% endfor %}
+</div>
+
+<!-- Sélecteur de tri -->
+<select id="sortSelect">
+  <option value="prenom">Trier par prénom</option>
+</select>
+
+<!-- Liste des profils -->
+<div id="profilesContainer">
+  {% assign all_profiles = site.medecins | concat: site.infirmiers | concat: site.aides_soignants | concat: site.secretaires | concat: site.brancardiers | concat: site.cadres %}
+  {% for profil in all_profiles %}
+    <div class="profile-card" 
+         data-prenom="{{ profil.prenom | downcase }}" 
+              <a href="{{ profil.url }}">
+        <img src="{{ profil.photo }}" alt="{{ profil.title }}">
+        <p>{{ profil.title }}</p>
+      </a>
+    </div>
   {% endfor %}
 </div>
 
