@@ -15,3 +15,38 @@ title: Accueil
 <br>
 <br>
 <h2> Dernière mise à jour: 12/08/2025 à 22h15</h2>
+
+---
+  essai champ de recherche
+---
+
+<div style="margin-bottom: 1rem;">
+  <input 
+    type="text" 
+    id="searchInput" 
+    placeholder="Rechercher par nom ou prénom..." 
+    style="padding: 0.5rem; width: 250px;"
+  >
+  
+  <select id="sortSelect" style="padding: 0.5rem; margin-left: 1rem;">
+    <option value="">-- Trier par --</option>
+    <option value="prenom">Prénom</option>
+    <option value="anciennete">Ancienneté</option>
+  </select>
+</div>
+
+<div id="trombinoscopeGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+  {% assign all_profiles = site.medecins | concat: site.infirmiers | concat: site.aides_soignants %}
+  {% for profil in all_profiles %}
+    <div class="profil-card" 
+         data-prenom="{{ profil.prenom | downcase }}" 
+         data-anciennete="{{ profil.anciennete }}" 
+         data-nom="{{ profil.title | downcase }}">
+      <a href="{{ profil.url }}" style="text-decoration: none; color: inherit;">
+        <img src="{{ profil.photo }}" alt="{{ profil.title }}" style="width: 100%; border-radius: 8px;">
+        <h3 style="text-align: center; margin-top: 0.5rem;">{{ profil.title }}</h3>
+      </a>
+    </div>
+  {% endfor %}
+</div>
+
