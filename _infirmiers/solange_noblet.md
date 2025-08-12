@@ -1,6 +1,6 @@
 ---
 layout: profil
-title: Soalnge noblet
+title: Solange noblet
 photo: /assets/css/img/solange_noblet.jpg
 poste: Infirmière
 prenom: Solange
