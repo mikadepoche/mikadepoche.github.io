@@ -33,8 +33,7 @@ title: Accueil
 <div id="profilesContainer">
   {% for profil in site.pages %}
     {% if profil.layout == "profil" %}
-      <div class="profile-card" 
-           data-prenom="{{ profil.prenom | downcase }}">
+      <div class="profile-card" data-prenom="{{ profil.prenom | downcase }}">
         <a href="{{ profil.url }}">
           <img src="{{ profil.photo }}" alt="{{ profil.title }}">
           <p>{{ profil.title }}</p>
@@ -44,6 +43,7 @@ title: Accueil
   {% endfor %}
 </div>
 
+  
 <!-- Sélecteur de tri -->
 <select id="sortSelect">
   <option value="prenom">Trier par prénom</option>
