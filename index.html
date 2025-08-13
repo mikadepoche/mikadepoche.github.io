@@ -1,0 +1,37 @@
+---
+layout: default
+title: Accueil
+---
+
+<h1>Trombinoscope des urgences de Saint Nazaire</h1>
+
+<p>
+  Ce site est à destination des professionnels et différents étudiants des urgences de Saint Nazaire.
+  N'hésitez pas à me communiquer des informations (passions, année de diplôme, origine...) pour rendre plus vivant ce trombinoscope.
+</p>
+
+<p>Mon adresse mail : <a href="mailto:mickaelangue@gmail.com">mickaelangue@gmail.com</a></p>
+
+<p><em>Dernière mise à jour : 13/08/2025 à 10h00</em></p>
+
+<!-- Champ de recherche -->
+<input type="text" id="searchInput" placeholder="Rechercher par prénom…" />
+
+<!-- Grille des profils (une seule !) -->
+<div id="profilesContainer" class="profiles-grid">
+  {% assign all_profiles = site.medecins
+      | concat: site.infirmiers
+      | concat: site.aides_soignants
+      | concat: site.secretaires
+      | concat: site.brancardiers
+      | concat: site.cadres %}
+
+  {% for profil in all_profiles %}
+    <div class="profile-card" data-prenom="{{ profil.prenom | downcase }}">
+      <a href="{{ profil.url | relative_url }}">
+        <img src="{{ profil.photo | relative_url }}" alt="{{ profil.title }}">
+        <p>{{ profil.title }}</p>
+      </a>
+    </div>
+  {% endfor %}
+</div>
