@@ -258,4 +258,7 @@ h1 {
     }
 }
 
+.profile-card.hidden {
+    display: none;
+}
 
