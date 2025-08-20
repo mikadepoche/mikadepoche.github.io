@@ -1,27 +1,41 @@
 document.addEventListener("DOMContentLoaded", function () {
   const input = document.getElementById("searchInput");
-  const cards = document.querySelectorAll(".profile-card");
+  const container = document.getElementById("profilesContainer");
+  const cards = Array.from(container.querySelectorAll(".profile-card"));
 
-  // Au départ : cacher toutes les cartes
+  // Cacher toutes les cartes au départ
   cards.forEach(card => {
     card.style.display = "none";
   });
 
-  // Quand on tape dans la recherche
   input.addEventListener("input", function () {
     const search = input.value.toLowerCase().trim();
 
+    let filtered = [];
     cards.forEach(card => {
-      const name = card.querySelector(".profil-name")?.textContent.toLowerCase() || "";
-      const prenom = card.dataset.prenom || "";
+      const fullname = card.querySelector(".profil-name")?.textContent.toLowerCase() || "";
+      const prenom = card.dataset.prenom?.toLowerCase() || "";
 
-      // Si recherche vide → tout cacher
-      if (search === "") {
-        card.style.display = "none";
+      // recherche possible sur prénom OU nom de famille
+      if (search !== "" && (fullname.includes(search) || prenom.includes(search))) {
+        filtered.push(card);
       } else {
-        // Sinon → afficher seulement ceux qui correspondent
-        card.style.display = prenom.includes(search) || name.includes(search) ? "block" : "none";
+        card.style.display = "none";
       }
+    });
+
+    // 🔹 Tri uniquement par prénom
+    filtered.sort((a, b) => {
+      const prenomA = a.dataset.prenom || "";
+      const prenomB = b.dataset.prenom || "";
+      return prenomA.localeCompare(prenomB);
+    });
+
+    // Réinsérer les cartes triées
+    filtered.forEach(card => {
+      card.style.display = "block";
+      container.appendChild(card);
     });
   });
 });
+
