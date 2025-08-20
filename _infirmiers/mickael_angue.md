@@ -3,6 +3,7 @@ layout: profil
 title: Mickaël Angué
 photo: /assets/css/img/mickael_angue2.jpg
 poste: Infirmier
+prenom: Mickaël
 description: |
   Mickaël est infirmier depuis 2003, aux urgences depuis 2012
    
