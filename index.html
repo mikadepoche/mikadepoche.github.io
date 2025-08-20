@@ -6,26 +6,39 @@ title: Accueil
 <h1>Trombinoscope des urgences de Saint Nazaire</h1>
 
 <p>
-  Ce site est à destination des professionnels et différents étudiants des urgences de Saint Nazaire.
-  N'hésitez pas à me communiquer des informations (passions, année de diplôme, origine...) pour rendre plus vivant ce trombinoscope.
+  Ce site est à destination des professionnels et étudiants des urgences de Saint Nazaire.
+  Envoyez vos infos (passions, année de diplôme, origine…) pour enrichir le trombinoscope.
 </p>
+<p>Contact : <a href="mailto:mickaelangue@gmail.com">mickaelangue@gmail.com</a></p>
 
-<p>Mon adresse mail : <a href="mailto:mickaelangue@gmail.com">mickaelangue@gmail.com</a></p>
+<input type="text" id="searchInput" placeholder="Rechercher par prénom…">
 
-<p><em>Dernière mise à jour : 13/08/2025 à 11h00</em></p>
+{%- comment -%}
+On crée d’abord un tableau vide de manière 100% Liquid-safe,
+puis on concatène chaque collection **seulement si elle existe**.
+{%- endcomment -%}
+{% assign all_profiles = "" | split: "" %}
 
-<!-- Champ de recherche -->
-<input type="text" id="searchInput" placeholder="Rechercher par prénom…" />
+{% if site.medecins %}
+  {% assign all_profiles = all_profiles | concat: site.medecins %}
+{% endif %}
+{% if site.infirmiers %}
+  {% assign all_profiles = all_profiles | concat: site.infirmiers %}
+{% endif %}
+{% if site['aides-soignants'] %}
+  {% assign all_profiles = all_profiles | concat: site['aides-soignants'] %}
+{% endif %}
+{% if site.secretaires %}
+  {% assign all_profiles = all_profiles | concat: site.secretaires %}
+{% endif %}
+{% if site.brancardiers %}
+  {% assign all_profiles = all_profiles | concat: site.brancardiers %}
+{% endif %}
+{% if site.cadres %}
+  {% assign all_profiles = all_profiles | concat: site.cadres %}
+{% endif %}
 
-<!-- Grille des profils (une seule !) -->
 <div id="profilesContainer" class="profiles-grid">
-  {% assign all_profiles = site.medecins
-      | concat: site.infirmiers
-      | concat: site.aides_soignants
-      | concat: site.secretaires
-      | concat: site.brancardiers
-      | concat: site.cadres %}
-
   {% for profil in all_profiles %}
     <div class="profile-card" data-prenom="{{ profil.prenom | downcase }}">
       <a href="{{ profil.url | relative_url }}">
