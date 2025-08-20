@@ -1,0 +1,19 @@
+collections:
+  medecins:
+    output: true
+    permalink: /medecins/:name/
+  infirmiers:
+    output: true
+    permalink: /infirmiers/:name/
+  aides-soignants:
+    output: true
+    permalink: /aides-soignants/:name/
+  secretaires:
+    output: true
+    permalink: /secretaires/:name/
+  brancardiers:
+    output: true
+    permalink: /brancardiers/:name/
+  cadres:
+    output: true
+    permalink: /cadres/:name/
