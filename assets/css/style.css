@@ -47,7 +47,7 @@ li:hover {
 
 /* IMAGES */
 img {
-  border-radius: 50%;
+  border-radius: 10%;
   max-width: 200px;
   height: auto;
   margin-bottom: 1rem;
