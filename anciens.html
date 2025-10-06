@@ -6,13 +6,14 @@ title: Anciens
 <h1>Anciens des urgences</h1>
 <p>Voici la liste des anciens collègues qui ont fait partie de l'équipe.</p>
 
-<div class="profiles-list">
+<ul class="profiles-list">
   {% for profil in site.anciens %}
-    <div class="profil-card ancien" data-prenom="{{ profil.prenom | downcase }}">
+    <li class="profil-card ancien" data-prenom="{{ profil.prenom | downcase }}">
       <a href="{{ profil.url }}">
         <img src="{{ profil.photo }}" alt="{{ profil.title }}">
-        <p class="profil-name">{{ profil.title }}</p>
+        <div class="profil-name">{{ profil.title }}</div>
       </a>
-    </div>
+    </li>
   {% endfor %}
-</div>
+</ul>
+
