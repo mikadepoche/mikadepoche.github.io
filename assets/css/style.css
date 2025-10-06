@@ -83,11 +83,6 @@ img {
   line-height: 1.6;
 }
 
-/* Pour les anciens membres */
-.profile-card.ancien img {
-  filter: grayscale(100%);
-  opacity: 0.8; /* optionnel : léger effet estompé */
-}
 
 /* BARRE DE NAVIGATION */
 .navbar {
@@ -199,6 +194,12 @@ img {
 .profil-name {
   margin-top: 0.3rem;
   font-weight: bold;
+}
+
+/* Pour les anciens membres */
+.profil-card.ancien img {
+  filter: grayscale(100%);
+  opacity: 0.8; /* optionnel : léger effet estompé */
 }
 /* Style général */
 
