@@ -8,7 +8,7 @@ title: Anciens
 
 <div class="profiles-list">
   {% for profil in site.anciens %}
-    <div class="profile-card ancien" data-prenom="{{ profil.prenom | downcase }}">
+    <div class="profil-card ancien" data-prenom="{{ profil.prenom | downcase }}">
       <a href="{{ profil.url }}">
         <img src="{{ profil.photo }}" alt="{{ profil.title }}">
         <p class="profil-name">{{ profil.title }}</p>
