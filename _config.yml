@@ -17,6 +17,3 @@ collections:
   cadres:
     output: true
     permalink: /cadres/:name/
-partis:
-    output: true
-    permalink: /partis/:name/
