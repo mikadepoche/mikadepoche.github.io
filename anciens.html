@@ -1,0 +1,18 @@
+---
+layout: default
+title: Anciens
+---
+
+<h1>Anciens de la structure</h1>
+<p>Voici la liste des anciens collègues qui ont fait partie de l'équipe.</p>
+
+<div class="profiles-list">
+  {% for profil in site.anciens %}
+    <div class="profile-card ancien" data-prenom="{{ profil.prenom | downcase }}">
+      <a href="{{ profil.url }}">
+        <img src="{{ profil.photo }}" alt="{{ profil.title }}">
+        <p class="profil-name">{{ profil.title }}</p>
+      </a>
+    </div>
+  {% endfor %}
+</div>
