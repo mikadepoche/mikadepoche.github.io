@@ -12,7 +12,7 @@ title: Accueil
 <!-- Liste des profils -->
 <div id="profilesContainer">
   {% assign combined1 = site.infirmiers | default: empty | concat: site.medecins | default: empty %}
-  {% assign combined2 = combined1 | concat: site.aides-soignants | default: empty %}
+  {% assign combined2 = combined1 | concat: site['aides-soignants'] | default: empty %}
   {% assign combined3 = combined2 | concat: site.secretaires | default: empty %}
   {% assign combined4 = combined3 | concat: site.brancardiers | default: empty %}
   {% assign all_profiles = combined4 | concat: site.cadres | default: empty %}
