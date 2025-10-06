@@ -84,7 +84,7 @@ img {
 }
 
 /* Pour les anciens membres */
-.profile-card.anciens img {
+.profile-card.ancien img {
   filter: grayscale(100%);
   opacity: 0.8; /* optionnel : léger effet estompé */
 }
