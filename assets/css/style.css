@@ -82,6 +82,13 @@ img {
   margin-top: 1.5rem;
   line-height: 1.6;
 }
+
+/* Pour les anciens membres */
+.profile-card.ancien img {
+  filter: grayscale(100%);
+  opacity: 0.8; /* optionnel : léger effet estompé */
+}
+
 /* BARRE DE NAVIGATION */
 .navbar {
   background-color: #2c3e50;
