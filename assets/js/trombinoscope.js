@@ -32,10 +32,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Réinsérer les cartes triées dans le container
-    filtered.forEach(card => {
-      card.style.display = "block";
-      container.appendChild(card); // réordonne dans le DOM
-    });
+filtered.forEach(card => {
+  card.style.display = "block";
+
+  // Vérifier si c'est un ancien et réappliquer le style si besoin
+  if (card.classList.contains("ancien")) {
+    const img = card.querySelector("img");
+    if (img) {
+      img.style.filter = "grayscale(100%)";
+      img.style.opacity = "0.8";
+    }
+  }
+
+  container.appendChild(card); // réordonne dans le DOM
+});
+
   });
 });
 
