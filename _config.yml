@@ -17,3 +17,6 @@ collections:
   cadres:
     output: true
     permalink: /cadres/:name/
+  anciens:
+    output: true
+    permalink: /anciens/:name/
