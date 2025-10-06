@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Trier les résultats filtrés par prénom (ordre alphabétique)
+    // Trier les résultat filtrés par prénom (ordre alphabétique)
     filtered.sort((a, b) => {
       const prenomA = a.dataset.prenom.toLowerCase();
       const prenomB = b.dataset.prenom.toLowerCase();
