@@ -15,6 +15,7 @@ title: Accueil
   {% assign combined3 = combined2 | concat: site.secretaires | default: empty %}
   {% assign combined4 = combined3 | concat: site.brancardiers | default: empty %}
   {% assign all_profiles = combined4 | concat: site.cadres | default: empty %}
+  {% assign all_profiles = combined5 | concat: site.partis | default: empty %}
 
   {% for profil in all_profiles %}
     <div class="profile-card" data-prenom="{{ profil.prenom | downcase }}">
