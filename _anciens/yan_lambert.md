@@ -2,7 +2,7 @@
 layout: profil
 title: Yan Lambert
 photo: /assets/css/img/yan_lambert.jpg
-poste: Medecin
+poste: Docteur Junior été 2025
 prenom: Yan
 anciennete: 
 description: |
